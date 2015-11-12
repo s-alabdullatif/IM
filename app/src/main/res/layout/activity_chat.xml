@@ -13,13 +13,68 @@
         android:clickable="false"
         android:visibility="visible" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp">
 
-        <!--Here goes rest of the layout-->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/etMessage"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/etMessage"
+            android:layout_gravity="end"
+            android:textSize="30sp" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_toLeftOf="@+id/etMessage"
+            android:layout_toStartOf="@+id/etMessage"
+            android:contentDescription="@string/profile_image"
+            android:src="@mipmap/default_user_image" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/etMessage"
+            android:layout_alignEnd="@+id/etMessage"
+            android:layout_alignRight="@+id/etMessage"
+            android:layout_below="@+id/imageView"
+            android:background="#d8ecfc"
+            android:fillViewport="false" />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_toEndOf="@+id/bSearch"
+            android:layout_toRightOf="@+id/bSearch"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/bSearch"
+            android:layout_width="30pt"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/etMessage"
+            android:singleLine="false"
+            android:text="@string/send" />
+
+    </RelativeLayout>
+
+
 </LinearLayout>
